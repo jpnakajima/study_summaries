@@ -24,6 +24,9 @@ $ git add .
 $ git commit -m "message commit or changes maked"
 	command to add the arquive created to a commit
 
+$ git commit -a -m "Commit changes"
+	do the command "git add" and "git commit", loading changes on stage and commiting then
+
 $ git log
 	show log of the repository with commits and who do they
 
@@ -48,4 +51,5 @@ git add look for changes in arquives and folders to a special area named "stage"
 		imagens/*.bmp
 	or
 		https://github.com/github/gitignore
+		
 	
