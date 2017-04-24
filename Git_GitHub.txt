@@ -1,8 +1,20 @@
 $ git config --global user.name "João Paulo Nakajima Pereira"
+	configure your name
 $ git config --global user.email joaopaulonakajima@gmail.com
+	configure your email
 
-echo ~ --> show home directory
+$ echo ~
+	show home directory
 
-go to folder with code on git using cd and ls commands
+	go to folder with code on git using cd and ls commands
+
 $ git init
-this command transform the folder into a repository with a .git file
+	this command transform the folder into a repository with a .git file
+
+$ git status
+	status of the folder and its children
+
+$ git add file_name.txt
+
+$ git commit -m file_name.txt
+	command to add the arquive created to a commit
