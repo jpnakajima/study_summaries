@@ -3,8 +3,10 @@ $ git config --global user.name "João Paulo Nakajima Pereira"
 $ git config --global user.email joaopaulonakajima@gmail.com
 	configure your email
 
-$ echo ~
+echo ~
 	show home directory
+
+ls -lha
 
 	go to folder with code on git using cd and ls commands
 
@@ -15,6 +17,35 @@ $ git status
 	status of the folder and its children
 
 $ git add file_name.txt
+	To add the file_name.txt for be rastreability
+$ git add .
+	add all folders/subfolders and arquives to be rastreability
 
-$ git commit -m file_name.txt
+$ git commit -m "message commit or changes maked"
 	command to add the arquive created to a commit
+
+$ git log
+	show log of the repository with commits and who do they
+
+$ git remote add origin https://github.com/fulanodasilva/citacoes.git
+	configure a origin to your project
+
+$ git push origin master
+	send the alterations to origin(remote repository)
+	
+$ git clone https://github.com/fulanodasilva/citacoes.git
+	clone from a remote repository to your computer
+	
+git init --> git status --> git add index.html(to add or reload the changes for commit)
+git add look for changes in arquives and folders to a special area named "stage"
+
+.gitignore
+	arquive with this type and this content is arquives to ignore to track to be commited
+	examples:
+		tmp/
+		test_git_ignore.txt
+		*.log
+		imagens/*.bmp
+	or
+		https://github.com/github/gitignore
+	

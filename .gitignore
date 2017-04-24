@@ -1,0 +1,4 @@
+tmp/
+test_git_ignore.txt
+*.log
+imagens/*.bmp
