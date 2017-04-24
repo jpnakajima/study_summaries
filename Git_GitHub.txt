@@ -1,0 +1,8 @@
+$ git config --global user.name "João Paulo Nakajima Pereira"
+$ git config --global user.email joaopaulonakajima@gmail.com
+
+echo ~ --> show home directory
+
+go to folder with code on git using cd and ls commands
+$ git init
+this command transform the folder into a repository with a .git file
