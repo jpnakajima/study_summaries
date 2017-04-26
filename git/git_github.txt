@@ -1,0 +1,123 @@
+INIT
+$ git config --global user.name "João Paulo Nakajima Pereira"
+	configure your name
+$ git config --global user.email joaopaulonakajima@gmail.com
+	configure your email
+
+echo ~
+	show home directory
+
+ls -lha
+	show a content arquives, folders and 
+
+	go to folder with code on git using cd and ls commands
+
+$ git init
+	this command transform the folder into a repository with a .git file
+
+$ git status
+	status of the folder and its children
+
+$ git add file_name.txt
+	To add the file_name.txt for be rastreability
+$ git add .
+	add all folders/subfolders and arquives to be rastreability
+
+$ git commit -m "message commit or changes maked"
+	command to add the arquive created to a commit
+
+$ git commit -a -m "Commit changes"
+	do the command "git add" and "git commit", loading changes on stage and commiting then
+	OBS: it wont work on NEW arquives, to track then, is necessary to git add all then again
+-----------------------------------------------------------------------
+LOG
+
+$ git log
+	show log of the repository with commits and who do they
+$ git log -n 2
+	show the last 2 commits
+$ git log --oneline
+	show log with a line per commit(resume)
+$ git log --stat
+	show a detailed log with addictions and removed(looked like commit informations)
+$ git log -n 2 --oneline --stat
+-----------------------------------------------------------------------
+REMOTE
+$ git remote add origin https://github.com/fulanodasilva/citacoes.git
+	configure a origin to your project
+
+$ git push origin master
+	send the alterations to origin(remote repository)
+	
+$ git clone https://github.com/fulanodasilva/citacoes.git
+	clone from a remote repository to your computer
+-----------------------------------------------------------------------	
+STAGE AREA
+git init --> git status --> git add index.html(to add or reload the changes for commit)
+git add look for changes in arquives and folders to a special area named "stage"
+-----------------------------------------------------------------------
+GIT IGNORE
+.gitignore
+	arquive with this type and this content is arquives to ignore to track to be commited
+	examples:
+		tmp/
+		test_git_ignore.txt
+		*.log
+		imagens/*.bmp
+	or
+		https://github.com/github/gitignore
+-----------------------------------------------------------------------
+CONFLICTS
+$ git diff
+	show the diferences between last commit and changes make in arquives
+$ git diff index.html
+	especify the arquive to see the changes
+$ git diff --staged
+	show the diferences between last commit and changes in staged
+To see the diferences in stage and not in stage:
+	take the code of last commit with:
+	$ git log -n 1 --oneline
+	$ git diff CODECOM
+	$ git diff 222cccc..8877887
+		compare the changes between this 2 commits
+	$ git diff 8877887~2
+		compare the changes between this commit and 2 commits old MORE changes not commited yet
+-----------------------------------------------------------------------
+UNDO
+$ git rm example.html
+	remove the arquive
+
+$ git mv old.css new.css
+	rename the old arquive to the new arquive
+
+$ git mv principal.js js/principal.js
+	move from the origin to destiny
+
+$ git checkout -- index.html
+	desfaz changes not moved to stage yet(changes in stage aren't afected)
+
+$ git reset -- index.html
+	take out the arquive from the stage area
+	
+$ git reset --hard
+	arquives from stage are retired from stage and your changes are undo
+	
+$ git revert --no-edit 6111116
+	revert the changes of the commit(can use HEAD on place of code commit)
+$ git reset --hard 7733388
+	revert all changes to the commit selected
+-----------------------------------------------------------------------
+REMOTE
+$ git init --bare moveis-ecologicos.git
+	create a repository without a working tree(only others entities can save in this repository)
+	
+$ git remote add servidor file://192.168.1.1/opt/repositorios/moveis-ecologicos.git
+	repository pointing to the server on a lan
+
+$ git remote
+	list all servers
+$ git remote -v
+	list all servers with URL
+	
+	
+CONTINUE ON PAGE 70 OF ARQUIVE PDF...
